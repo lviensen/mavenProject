@@ -17,9 +17,10 @@ public class ClienteDao {
 	
 	
 	private void initClientes(){
+
 		
 		if(clientes.size() <= 0){
-			
+			clientes = new ArrayList<Cliente>();
 			Cliente c = new Cliente();
 			
 			c.setCodigo(geraCodigo());

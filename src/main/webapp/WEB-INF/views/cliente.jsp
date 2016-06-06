@@ -45,7 +45,7 @@
 					<td>${cliente.bairro}</td>
 					<td>${cliente.cidade}</td>
 					<td><a class="btn btn-danger"
-						href="">Remover</a></td>
+						href="removeClientes?codigo=${cliente.codigo}">Remover</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

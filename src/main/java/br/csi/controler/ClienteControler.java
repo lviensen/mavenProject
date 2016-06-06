@@ -32,8 +32,9 @@ public class ClienteControler {
 		mv.addObject("clientes", new ClienteDao().listaClientes());
 		return mv;
 	}
-	
+	@RequestMapping("removeClientes")
 	public String remove(Cliente cliente){
+		System.out.println("Entrou em remover Cliente");
 		return "forward:listaClientes";
 	}
 	
