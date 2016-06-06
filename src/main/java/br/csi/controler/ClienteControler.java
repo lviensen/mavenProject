@@ -19,7 +19,7 @@ public class ClienteControler {
 	public String adiciona(Cliente cliente){
 		boolean retorno = new ClienteDao().adicionar(cliente);
 		if(retorno){
-			return "cliente";
+			return "forward:listaClientes";
 		}else{
 			return "erro";
 		}
@@ -31,6 +31,10 @@ public class ClienteControler {
 		ModelAndView mv = new ModelAndView("cliente");
 		mv.addObject("clientes", new ClienteDao().listaClientes());
 		return mv;
+	}
+	
+	public String remove(Cliente cliente){
+		return "forward:listaClientes";
 	}
 	
 }
