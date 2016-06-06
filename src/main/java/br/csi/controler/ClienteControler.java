@@ -13,7 +13,7 @@ public class ClienteControler {
 @RequestMapping("clientes")
 	public String msgTeste(){
 		System.out.println("chamou o controlador");
-		return "cliente";
+		return "forward:listaClientes";
 	}
 	@RequestMapping("adicionarClientes")
 	public String adiciona(Cliente cliente){
