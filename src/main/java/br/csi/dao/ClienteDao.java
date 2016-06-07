@@ -48,10 +48,16 @@ public class ClienteDao {
 	}
 	
 	public boolean remover(Cliente c){
+		System.out.println("Entrou em remover Cliente do Dao -------");
 		
-		clientes.remove(c);
+		for(Cliente cl : clientes){
+			if(cl.getCodigo() == c.getCodigo()){
+				clientes.remove(cl);
+				return true;
+			}
+		}
 		
-		return true;
+		return false;
 	}
 	
 	

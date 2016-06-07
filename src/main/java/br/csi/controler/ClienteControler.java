@@ -35,6 +35,7 @@ public class ClienteControler {
 	@RequestMapping("removeClientes")
 	public String remove(Cliente cliente){
 		System.out.println("Entrou em remover Cliente");
+		boolean remove = new ClienteDao().remover(cliente);
 		return "forward:listaClientes";
 	}
 	
